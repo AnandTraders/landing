@@ -65,7 +65,18 @@ updateCounter();
 // ==========================
 function toggleFAB() {
     const fab = document.querySelector(".fab-container");
-    if (fab) fab.classList.toggle("active");
+    const btn = document.getElementById("fabButton");
+
+    if (!fab || !btn) return;
+
+    fab.classList.toggle("active");
+
+    // change icon/text based on state
+    if (fab.classList.contains("active")) {
+        btn.innerHTML = "❌";
+    } else {
+        btn.innerHTML = "📊";
+    }
 }
 
 
