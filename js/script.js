@@ -143,4 +143,11 @@ function sendToWhatsapp() {
     let url = "https://wa.me/919825846168?text=" + encodeURIComponent(message);
 
     window.open(url, "_blank");
+    
+    // Close Bootstrap Modal
+    const modalElement = document.getElementById("whatsappModal");
+    const modal = bootstrap.Modal.getInstance(modalElement);
+    if (modal) {
+        modal.hide();
+    }
 }
