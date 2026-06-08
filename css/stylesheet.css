@@ -1216,6 +1216,13 @@ footer-disclaimer
         overflow-x: hidden;
     }
 
+    .about-badge {
+        font-size: 8px;
+        text-align: center;
+        position: absolute;
+        left: 10px;
+    }
+
     .navbar-brand {
         font-size: 1.2rem;
     }
