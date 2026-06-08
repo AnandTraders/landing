@@ -161,4 +161,12 @@ function sendToWhatsapp() {
     if (modal) {
         modal.hide();
     }
+
+    // ✅ CLEAR INPUTS (THIS WAS MISSING)
+    document.getElementById("waName").value = "";
+    document.getElementById("waPhone").value = "";
+
+    // optional: clear errors too
+    if (nameError) nameError.innerText = "";
+    if (phoneError) phoneError.innerText = "";
 }
