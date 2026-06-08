@@ -1212,6 +1212,10 @@ footer-disclaimer
 
 /*-------320PX-----------*/
 @media (max-width: 320px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .navbar-brand {
         font-size: 1.2rem;
     }
@@ -1220,6 +1224,8 @@ footer-disclaimer
         padding: 20px;
         margin-bottom: 20px;
         text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .pricing-title {
@@ -1242,15 +1248,23 @@ footer-disclaimer
 
     /* CONTACT INFO CARDS STACK VERTICALLY */
     .contact-info {
+        display: flex;
         flex-direction: column;
-        gap: 15px;
+        width: 100%;
     }
 
     .info-card {
-        flex-direction: row; /* Keep icon + text side by side */
-        padding: 15px;
-        gap: 10px;
+        flex-direction: row;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
     }
+
+        .info-card p,
+        .info-card h5 {
+            word-break: break-word;
+            font-size: 13px;
+        }
 
         .info-card i {
             width: 35px;
