@@ -1368,16 +1368,6 @@ footer-disclaimer
     max-width: 100%;
 }
 
-.container {
-    overflow-x: clip;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 .whatsapp-float,
 .pricing-float,
 .bell-float,
