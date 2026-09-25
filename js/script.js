@@ -84,21 +84,34 @@ function toggleFAB() {
 // Navbar Collapse on Click (Mobile)
 // ==========================
 document.addEventListener("DOMContentLoaded", function () {
+
     const navbarCollapse = document.getElementById("menu");
 
     if (navbarCollapse) {
+
         const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
             toggle: false
         });
 
         document.querySelectorAll(".nav-link").forEach(link => {
+
             link.addEventListener("click", function () {
+
+                // Don't close navbar when clicking a dropdown
+                if (this.classList.contains("dropdown-toggle")) {
+                    return;
+                }
+
+                // Close navbar for normal links on mobile
                 if (window.innerWidth < 992) {
                     bsCollapse.hide();
                 }
+
             });
-    });
-}
+
+        });
+
+    }
 });
 
 
