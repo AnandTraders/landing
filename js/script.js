@@ -97,12 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             link.addEventListener("click", function () {
 
-                // Don't close navbar when clicking a dropdown
                 if (this.classList.contains("dropdown-toggle")) {
                     return;
                 }
 
-                // Close navbar for normal links on mobile
                 if (window.innerWidth < 992) {
                     bsCollapse.hide();
                 }
@@ -112,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
+
 });
 
 
