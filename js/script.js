@@ -80,6 +80,7 @@ function toggleFAB() {
 }
 
 
+
 // ==========================
 // Navbar Collapse on Click (Mobile)
 // ==========================
@@ -87,32 +88,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const navbarCollapse = document.getElementById("menu");
 
-    if (navbarCollapse) {
+    if (!navbarCollapse) return;
 
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-            toggle: false
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+    });
+
+    // Close navbar only for normal links
+    document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            // Do NOT close navbar when clicking dropdown toggle
+            if (this.classList.contains("dropdown-toggle")) {
+                return;
+            }
+
+            // Close navbar on mobile
+            if (window.innerWidth < 992) {
+                bsCollapse.hide();
+            }
+
         });
 
-        document.querySelectorAll(".nav-link").forEach(link => {
-
-            link.addEventListener("click", function () {
-
-                if (this.classList.contains("dropdown-toggle")) {
-                    return;
-                }
-
-                if (window.innerWidth < 992) {
-                    bsCollapse.hide();
-                }
-
-            });
-
-        });
-
-    }
+    });
 
 });
-
 
 // ==========================
 // WhatsApp Form Submit
