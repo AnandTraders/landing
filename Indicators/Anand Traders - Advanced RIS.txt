@@ -1,0 +1,15 @@
+//@version=4
+study(title="Anand Traders - Advanced RIS", shorttitle="Anand Traders - Advanced RIS", format=format.price, precision=2, resolution="")
+len = input(9, minval=1, title="Length")
+src = input(close, "Source", type = input.source)
+_rsi=rsi(src,len)
+
+h_50=plot(50,color=color.green,style=plot.style_line, linewidth=1,title="Line -50 ")
+p_rsi=plot(_rsi,color=color.black,style=plot.style_line,linewidth=2 ,title="RSI - Plot")
+fill(p_rsi, h_50, color = _rsi > 50 ?  color.red:color.aqua,transp=50)
+
+wma_21=wma(_rsi,21)
+ema_3=ema(_rsi,3)
+
+plot(wma_21, color=color.red, style=plot.style_line, linewidth=2, title="Strength")
+plot(ema_3, color=color.green, style=plot.style_line, linewidth=2,title="Price")
