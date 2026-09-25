@@ -1388,3 +1388,78 @@ footer-disclaimer
     max-width: 100%;
     overflow-x: hidden;
 }
+
+
+
+/* ==============================
+   INDICATORS DROPDOWN
+   ============================== */
+
+.navbar .dropdown-menu {
+    min-width: 230px;
+    padding: 8px;
+    border: 0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .dropdown-item {
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+.navbar .dropdown-item i {
+    width: 18px;
+}
+
+/* ==============================
+   MOBILE INDICATORS DROPDOWN
+============================== */
+
+@media (max-width: 991.98px) {
+
+    .navbar .dropdown {
+        width: 100%;
+    }
+
+    .navbar .dropdown-toggle {
+        width: 100%;
+    }
+
+    .navbar .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        min-width: 100%;
+        margin: 5px 0 10px 0;
+        padding: 8px;
+        border-radius: 10px;
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+        transform: none !important;
+    }
+
+    .navbar .dropdown-item {
+        padding: 12px 15px;
+        border-radius: 8px;
+    }
+
+    .navbar .dropdown-item:hover,
+    .navbar .dropdown-item:focus {
+        background: #16a34a;
+        color: #ffffff;
+    }
+
+}
+
