@@ -1448,11 +1448,22 @@ footer-disclaimer
         box-shadow: none;
         border: 1px solid #e5e7eb;
         transform: none !important;
+
+        /* MOBILE DROPDOWN SCROLL */
+        max-height: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        /* Smooth scrolling */
+        -webkit-overflow-scrolling: touch;
     }
 
     .navbar .dropdown-item {
+        display: block;
+        width: 100%;
         padding: 12px 15px;
         border-radius: 8px;
+        white-space: normal;
     }
 
     .navbar .dropdown-item:hover,
@@ -1461,5 +1472,34 @@ footer-disclaimer
         color: #ffffff;
     }
 
+    /* =========================
+       MOBILE DROPDOWN SCROLLBAR
+    ========================= */
+
+    .navbar .dropdown-menu::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .navbar .dropdown-menu::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .navbar .dropdown-menu::-webkit-scrollbar-thumb {
+        background: #0F9D58;
+        border-radius: 10px;
+    }
+
+    .navbar .dropdown-menu::-webkit-scrollbar-thumb:hover {
+        background: #0A6C3D;
+    }
+
+    /* Firefox */
+    .navbar .dropdown-menu {
+        scrollbar-width: thin;
+        scrollbar-color: #0F9D58 #f1f1f1;
+    }
 }
+
+
 
