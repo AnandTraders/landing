@@ -1501,7 +1501,7 @@ footer-disclaimer
     }
 }
 
-.pricing-card .pricing-list ul li b{
+.pricing-card .pricing-list li b{
 color: var(--red);
 }
 
