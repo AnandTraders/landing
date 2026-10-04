@@ -593,6 +593,8 @@ body {
     background: #eef9f2;
     color: #0F9D58;
     font-weight: 700;
+    border-color: transparent;
+    border: 1px solid #0F9D58;
 }
 
     .btn-plan:hover {
