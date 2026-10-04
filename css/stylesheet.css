@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --green:#0F9D58;
     --darkgreen:#0A6C3D;
     --lightgreen:#F4FBF7;
@@ -621,6 +621,48 @@ body {
 
     .featured {
         transform: none;
+    }
+}
+
+
+/* =======================
+   SINGLE PREMIUM PLAN
+======================= */
+
+.pricing-section .pricing-card {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pricing-section .pricing-list {
+    text-align: left;
+}
+
+/* Premium price */
+.pricing-section .price {
+    margin: 25px 0;
+}
+
+/* Better spacing on larger screens */
+@media (min-width: 992px) {
+    .pricing-section .pricing-card {
+        padding: 45px;
+    }
+}
+
+/* Mobile alignment */
+@media (max-width: 575.98px) {
+    .pricing-section .pricing-card {
+        padding: 25px 20px;
+    }
+
+    .pricing-section .pricing-title {
+        font-size: 30px;
+    }
+
+    .pricing-section .pricing-list li {
+        font-size: 14px;
     }
 }
 
